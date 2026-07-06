@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.9.38">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Project 4 — Instructions – STAT 109 — Projects (Accessibility Review)</title>
+<style>
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-15634bcf2e68342d4ad2dfa704d543f6.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-bba5ebae505b5c03f3f0d8040a416a6b.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "sidebar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "start",
+  "type": "textbox",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+<link rel="stylesheet" href="../assets/css/humboldt-theme.css">
+</head>
+
+<body class="floating quarto-light">
+
+<div id="quarto-search-results"></div>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
+    <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#phase-a-optional-worksheet-ten-study-design-questions" id="toc-phase-a-optional-worksheet-ten-study-design-questions" class="nav-link active" data-scroll-target="#phase-a-optional-worksheet-ten-study-design-questions">Phase A (optional worksheet): Ten study-design questions</a>
+  <ul class="collapse">
+  <li><a href="#methods-reference-two-group-comparison-project-4-question-10" id="toc-methods-reference-two-group-comparison-project-4-question-10" class="nav-link" data-scroll-target="#methods-reference-two-group-comparison-project-4-question-10">Methods reference: two-group comparison (Project 4, question 10)</a></li>
+  </ul></li>
+  <li><a href="#phase-b-code-notebook-5-points" id="toc-phase-b-code-notebook-5-points" class="nav-link" data-scroll-target="#phase-b-code-notebook-5-points">Phase B, Code notebook (5 points)</a>
+  <ul class="collapse">
+  <li><a href="#code-notebook-rubric-5-points" id="toc-code-notebook-rubric-5-points" class="nav-link" data-scroll-target="#code-notebook-rubric-5-points">Code notebook rubric (5 points)</a></li>
+  </ul></li>
+  <li><a href="#phase-b-one-page-study-plan-report-35-points" id="toc-phase-b-one-page-study-plan-report-35-points" class="nav-link" data-scroll-target="#phase-b-one-page-study-plan-report-35-points">Phase B, One-page study-plan report (35 points)</a>
+  <ul class="collapse">
+  <li><a href="#one-page-report-rubric-35-points" id="toc-one-page-report-rubric-35-points" class="nav-link" data-scroll-target="#one-page-report-rubric-35-points">One-page report rubric (35 points)</a></li>
+  </ul></li>
+  </ul>
+<div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="project-4-instructions.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<div class="quarto-title-block"><div><h1 class="title">Project 4 — Instructions</h1><button type="button" class="btn code-tools-button" id="quarto-code-tools-source"><i class="bi"></i> Code</button></div></div>
+<p class="subtitle lead">Comparing two groups responsibly.</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="phase-a-optional-worksheet-ten-study-design-questions" class="level2">
+<h2 class="anchored" data-anchor-id="phase-a-optional-worksheet-ten-study-design-questions">Phase A (optional worksheet): Ten study-design questions</h2>
+<p>This phase is an ungraded worksheet (0 points). Treat it as preparation for the report. Answer using your assigned research question. Use vocabulary for study design, two-group tests and confidence intervals, and confounding.</p>
+<ol type="1">
+<li><p>Variables. Identify the <strong>explanatory</strong> and <strong>response</strong> variables in your assigned question. For each, give an operational definition: exactly what you measure, units if numerical, and levels or cutoffs for categories (so another student could record data the same way).</p></li>
+<li><p>Observational/Experimental units. What are the <strong>people</strong> or <strong>items</strong> from which data will be collected? Note: data from each of these items should put on the rows of the dataset with a column for each variable.</p></li>
+<li><p>Means or proportions? Will you summarize the comparison with a <strong>difference in means</strong> (numerical response) or a <strong>difference in proportions</strong> (binary / two-category response)?</p></li>
+<li><p>Hypotheses. State <strong>null and alternative hypotheses</strong> with symbols for the population quantities (e.g.&nbsp;<span class="math inline">\(\mu_1\)</span> and <span class="math inline">\(\mu_2\)</span> for means, or <span class="math inline">\(p_1\)</span> and <span class="math inline">\(p_2\)</span> for proportions). Define each symbol in a sentence in the context of the research question (e.g.&nbsp;<span class="math inline">\(\mu_1\)</span> is the mean height of soy bean plants grown with fertilizer type A or <span class="math inline">\(p_1\)</span> is the proportion of radishes eaten by gophers in the winter).</p></li>
+<li><p>RCT. Describe how you would run an ideal <strong>randomized controlled trial</strong> to answer the question, even if it is not feasible in real life. Be sure to mention random <em>assignment</em> of the groups in the explanatory variable along with when and what you would measure as the response variable.</p></li>
+<li><p>RCT: two explanations. If the data from an RCT showed a difference between the two groups, give the two general types of explanations for that finding.</p></li>
+<li><p>Observational study. Describe how an <strong>observational study</strong> could be carried out: who you observe, when, and what you record (note that in this design there is no random assignment of the explanatory groups).</p></li>
+<li><p>Observational: three explanations. If the observational study showed a difference in responses between the two explanatory groups, give the three general types of explanations.</p></li>
+<li><p>Confounding and DAG. Name one plausible <strong>confounder</strong> for the observational comparison. Draw a DAG with three nodes (explanatory, response, confounder) and arrows you could defend. In words, explain how the confounder is related to both the explanatory variable and the response.</p></li>
+<li><p>Statistical test for “by chance” explanation. Using the methods reference below, name the appropriate test to address the “by chance” explanation for your variable types. State the sample-size / expected-count and other conditions you must check before trusting the test’s <em>p</em>-value.</p></li>
+</ol>
+<section id="methods-reference-two-group-comparison-project-4-question-10" class="level3">
+<h3 class="anchored" data-anchor-id="methods-reference-two-group-comparison-project-4-question-10">Methods reference: two-group comparison (Project 4, question 10)</h3>
+<p>For <strong>one explanatory variable (two groups) + numerical response</strong>, use a <strong>Welch two-sample t-test</strong>:</p>
+<ul>
+<li>R code: <code>t.test(response ~ explanatory, data = mydataset, var.equal = FALSE)</code></li>
+<li>Null: <span class="math inline">\(H_0: \mu_1 - \mu_2 = 0\)</span>; conditions: independent observations, large <span class="math inline">\(n\)</span> per group or roughly normal within groups</li>
+</ul>
+<p>For <strong>one explanatory variable (two groups) + binary response</strong>, use a <strong>two-proportion test / chi-square test</strong>:</p>
+<ul>
+<li>R code: <code>prop.test()</code> or <code>chisq.test()</code> on a 2×2 table</li>
+<li>Null: <span class="math inline">\(H_0: p_1 - p_2 = 0\)</span>; conditions: independent observations; expected counts typically <span class="math inline">\(\geq 5\)</span> in each cell</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="phase-b-code-notebook-5-points" class="level2">
+<h2 class="anchored" data-anchor-id="phase-b-code-notebook-5-points">Phase B, Code notebook (5 points)</h2>
+<p>Goal. One reproducible notebook that (1) simulates a small, realistic-looking dataset for the research question and (2) analyzes it with appropriate descriptive statistics (numerical summaries and a plot) and inferential methods (test/CI). See the <a href="project-4-sample-notebook-yoga">sample R notebook</a> for the expected structure (simulate → describe → check the confounder → test)</p>
+<p>The simulated dataset should have:</p>
+<ul>
+<li>One row per observational unit; columns for the binary explanatory variable, the response variable, and, if a RCT is not feasible, the confounding variable you identified.</li>
+<li>Enough data for large-sample rules (e.g.&nbsp;<span class="math inline">\(n \geq 20\)</span> per group for <em>t</em>-tests; 2 × 2 counts with expected ≥ 5 for proportions/chi-square tests.</li>
+</ul>
+<p>Calculate descriptive statistics for the simulated dataset using:</p>
+<ul>
+<li>Numerical summaries: <code>group_by</code> + <code>summarize</code> for means/SDs; <code>count</code> / <code>mutate</code> for counts and proportions.</li>
+<li>Plots: boxplots/histograms by explanatory group for a numerical response; 100% stacked bar charts by explanatory group for a categorical response.</li>
+<li>If you have a confounder, use <code>facet_wrap(~ confounder)</code> in plots and include it in <code>group_by</code> for the numerical summaries.</li>
+</ul>
+<p>Perform the appropriate inferential method for the simulated dataset to see whether the data is consistent with the “by chance explanation”.</p>
+<ul>
+<li>Numerical response: <code>t.test(response ~ explanatory, data = mydataset, var.equal = FALSE)</code>, report <em>p</em>-value and 95% CI.</li>
+<li>Binary categorical response: <code>prop.test</code> / <code>chisq.test</code></li>
+<li>If you have a confounder, then the test doesn’t help very much because we can’t distinguish between confounding and causation.</li>
+</ul>
+<section id="code-notebook-rubric-5-points" class="level3">
+<h3 class="anchored" data-anchor-id="code-notebook-rubric-5-points">Code notebook rubric (5 points)</h3>
+<p>A notebook (<code>.ipynb</code> / <code>.qmd</code> / <code>.Rmd</code>) that runs top to bottom and includes:</p>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Points</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>2</td>
+<td>Reproducible simulation of a realistic dataset with <code>set.seed()</code>: one row per observational unit, columns for the binary explanatory variable, the response, and the confounder (if no RCT), with enough data for large-sample rules.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Descriptive analysis by explanatory group: <code>group_by</code> + <code>summarize</code> (means/SDs) or <code>count</code> + <code>mutate</code> (counts/proportions), plus an appropriate plot (boxplots/histograms for a numerical response; 100% stacked bars for a categorical response; <code>facet_wrap(~ confounder)</code> if used).</td>
+</tr>
+<tr class="odd">
+<td>1</td>
+<td>Correct inferential method run on the simulated data with reported output: <code>t.test</code> or <code>prop.test</code>/<code>chisq.test</code>, showing the <em>p</em>-value and 95% CI.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+</section>
+</section>
+<section id="phase-b-one-page-study-plan-report-35-points" class="level2">
+<h2 class="anchored" data-anchor-id="phase-b-one-page-study-plan-report-35-points">Phase B, One-page study-plan report (35 points)</h2>
+<p>Write a one page summary of your recommended study plan for a classmate. Include your recommended analysis performed on simulated data.</p>
+<ul>
+<li><strong>Introduction</strong>: Restate the research question from your classmate and describe the purpose of this document (which is to give a plan for collecting, analyzing and making an appropriate conclusion based on the data; sample R code is also provided and tested on simulated data).</li>
+<li><strong>Plan to Collect Data</strong>. Describe the response and explanatory variables, units, and measurement (see your answers to questions 1 and 2 from part 1). Justify your recommendation of either a RCT or an observational study based on the considerations of real-world feasibility and our desire for high quality evidence.</li>
+<li><strong>Plan to Analyze Data</strong>. In a few sentences describe how to analyze the dataset. Give the names of the plots and numerical summaries you recommend . Give the name of the appropriate inferential method (t-test or proportion z test/chi-square and state the conditions for it’s validity. Give the null and alternative hypotheses for the test in symbols, with a sentence describing what each symbol represents (see your answer to questions 3 and 4)</li>
+<li><strong>Plan to Make an Appropriate Conclusion</strong>. Discuss plausible explanations (causal, confounding, chance) consistent with your recommended study design. When discussing the “by chance” explanation and trying to eliminate it via a test, discuss the two types of errors that can result. That is, assuming that a significance level of 0.05 is used as the cutoff for determining whether a p-value is small, there is a 5% chance of making a Type I error. Say what a Type I Error would be in this context and how to reduce it (reduce significance level. Say what a Type II Error would be in this context and how to reduce it (increase sample size)</li>
+<li><strong>Simulated Results</strong>: Give the numerical summaries, plots, p-value and CI from your analysis of the simulated data. Make an appropriate conclusion based on these about what this data says about the answer to your classmates question. Give a link to your code notebook (in Colab, go to “share” in the upper right hand corner, set the access to be “with anyone with the link” with view access, copy this link and insert it into your one page summary)</li>
+</ul>
+<section id="one-page-report-rubric-35-points" class="level3">
+<h3 class="anchored" data-anchor-id="one-page-report-rubric-35-points">One-page report rubric (35 points)</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Points</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>4</td>
+<td>Introduction: restates the assigned research question and the purpose of the document (a plan to collect, analyze, and conclude, tested on simulated data).</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>Plan to collect: defines the explanatory and response variables with operational definitions/units/levels and the observational units; recommends an RCT or an observational study with a justification (feasibility vs.&nbsp;quality of evidence).</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>Plan to analyze: names the recommended plots and numerical summaries matched to the variable types; names the appropriate inferential method (Welch two-sample <em>t</em>-test, or two-proportion <em>z</em>/chi-square test) and states its conditions; states <span class="math inline">\(H_0\)</span> and <span class="math inline">\(H_a\)</span> in symbols with a sentence defining each symbol in context.</td>
+</tr>
+<tr class="even">
+<td>8</td>
+<td>Plan to conclude: discusses the plausible explanations consistent with the chosen design (causal / confounding / chance); defines a Type I and a Type II error in context and how to reduce each (lower the significance level; increase the sample size).</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>Sample results: reports the numerical summaries, plot(s), <em>p</em>-value, and 95% CI from the simulated data, makes an appropriate conclusion, and includes a working Colab share link to the notebook.</td>
+</tr>
+<tr class="even">
+<td>2</td>
+<td>Format: one side of a standard 8.5×11 in. page, complete sentences.</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<p>See also: <a href="../projects/project-4-preview.html">Preview</a> · <a href="../projects/project-4-milestone.html">Milestone</a> · <a href="../projects/project-4-instructions.html">Instructions</a> · <a href="../projects/project-4-rubric.html">Rubric</a> · <a href="../projects/project-4-sample-report.html">Sample report</a> · <a href="../projects/project-4-sample-notebook.html">Sample notebook</a></p>
+
+
+<!-- -->
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+    const viewSource = window.document.getElementById('quarto-view-source') ||
+                       window.document.getElementById('quarto-code-tools-source');
+    if (viewSource) {
+      const sourceUrl = viewSource.getAttribute("data-quarto-source-url");
+      viewSource.addEventListener("click", function(e) {
+        if (sourceUrl) {
+          // rstudio viewer pane
+          if (/\bcapabilities=\b/.test(window.location)) {
+            window.open(sourceUrl);
+          } else {
+            window.location.href = sourceUrl;
+          }
+        } else {
+          const modal = new bootstrap.Modal(document.getElementById('quarto-embedded-source-code-modal'));
+          modal.show();
+        }
+        return false;
+      });
+    }
+    function toggleCodeHandler(show) {
+      return function(e) {
+        const detailsSrc = window.document.querySelectorAll(".cell > details > .sourceCode");
+        for (let i=0; i<detailsSrc.length; i++) {
+          const details = detailsSrc[i].parentElement;
+          if (show) {
+            details.open = true;
+          } else {
+            details.removeAttribute("open");
+          }
+        }
+        const cellCodeDivs = window.document.querySelectorAll(".cell > .sourceCode");
+        const fromCls = show ? "hidden" : "unhidden";
+        const toCls = show ? "unhidden" : "hidden";
+        for (let i=0; i<cellCodeDivs.length; i++) {
+          const codeDiv = cellCodeDivs[i];
+          if (codeDiv.classList.contains(fromCls)) {
+            codeDiv.classList.remove(fromCls);
+            codeDiv.classList.add(toCls);
+          } 
+        }
+        return false;
+      }
+    }
+    const hideAllCode = window.document.getElementById("quarto-hide-all-code");
+    if (hideAllCode) {
+      hideAllCode.addEventListener("click", toggleCodeHandler(false));
+    }
+    const showAllCode = window.document.getElementById("quarto-show-all-code");
+    if (showAllCode) {
+      showAllCode.addEventListener("click", toggleCodeHandler(true));
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+            // target, if specified
+            link.setAttribute("target", "_blank");
+            if (link.getAttribute("rel") === null) {
+              link.setAttribute("rel", "noopener");
+            }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script><div class="modal fade" id="quarto-embedded-source-code-modal" tabindex="-1" aria-labelledby="quarto-embedded-source-code-modal-label" aria-hidden="true"><div class="modal-dialog modal-dialog-scrollable"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="quarto-embedded-source-code-modal-label">Source Code</h5><button class="btn-close" data-bs-dismiss="modal"></button></div><div class="modal-body"><div class="">
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2" data-shortcodes="false"><pre class="sourceCode markdown code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="an">title:</span><span class="co"> "Project 4 — Instructions"</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="an">subtitle:</span><span class="co"> "Comparing two groups responsibly."</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co">---</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Phase A (optional worksheet): Ten study-design questions</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>This phase is an ungraded worksheet (0 points). Treat it as preparation for the report. Answer using your assigned research question. Use vocabulary for study design, two-group tests and confidence intervals, and confounding.</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="ss">1.  </span>Variables. Identify the **explanatory** and **response** variables in your assigned question. For each, give an operational definition: exactly what you measure, units if numerical, and levels or cutoffs for categories (so another student could record data the same way).</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="ss">2.  </span>Observational/Experimental units. What are the **people** or **items** from which data will be collected? Note: data from each of these items should put on the rows of the dataset with a column for each variable.</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="ss">3.  </span>Means or proportions? Will you summarize the comparison with a **difference in means** (numerical response) or a **difference in proportions** (binary / two-category response)?</span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a><span class="ss">4.  </span>Hypotheses. State **null and alternative hypotheses** with symbols for the population quantities (e.g. $\mu_1$ and $\mu_2$ for means, or $p_1$ and $p_2$ for proportions). Define each symbol in a sentence in the context of the research question (e.g. $\mu_1$ is the mean height of soy bean plants grown with fertilizer type A or $p_1$ is the proportion of radishes eaten by gophers in the winter).</span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a><span class="ss">5.  </span>RCT. Describe how you would run an ideal **randomized controlled trial** to answer the question, even if it is not feasible in real life. Be sure to mention random *assignment* of the groups in the explanatory variable along with when and what you would measure as the response variable.</span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a><span class="ss">6.  </span>RCT: two explanations. If the data from an RCT showed a difference between the two groups, give the two general types of explanations for that finding.</span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a><span class="ss">7.  </span>Observational study. Describe how an **observational study** could be carried out: who you observe, when, and what you record (note that in this design there is no random assignment of the explanatory groups).</span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a><span class="ss">8.  </span>Observational: three explanations. If the observational study showed a difference in responses between the two explanatory groups, give the three general types of explanations.</span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a><span class="ss">9.  </span>Confounding and DAG. Name one plausible **confounder** for the observational comparison. Draw a DAG with three nodes (explanatory, response, confounder) and arrows you could defend. In words, explain how the confounder is related to both the explanatory variable and the response.</span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a><span class="ss">10. </span>Statistical test for “by chance” explanation. Using the methods reference below, name the appropriate test to address the “by chance” explanation for your variable types. State the sample-size / expected-count and other conditions you must check before trusting the test's *p*-value.</span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a><span class="fu">### Methods reference: two-group comparison (Project 4, question 10)</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>For **one explanatory variable (two groups) + numerical response**, use a **Welch two-sample t-test**:</span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-34"><a href="#cb2-34" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>R code: <span class="in">`t.test(response ~ explanatory, data = mydataset, var.equal = FALSE)`</span></span>
+<span id="cb2-35"><a href="#cb2-35" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Null: $H_0: \mu_1 - \mu_2 = 0$; conditions: independent observations, large $n$ per group or roughly normal within groups</span>
+<span id="cb2-36"><a href="#cb2-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-37"><a href="#cb2-37" aria-hidden="true" tabindex="-1"></a>For **one explanatory variable (two groups) + binary response**, use a **two-proportion test / chi-square test**:</span>
+<span id="cb2-38"><a href="#cb2-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-39"><a href="#cb2-39" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>R code: <span class="in">`prop.test()`</span> or <span class="in">`chisq.test()`</span> on a 2×2 table</span>
+<span id="cb2-40"><a href="#cb2-40" aria-hidden="true" tabindex="-1"></a><span class="ss">- </span>Null: $H_0: p_1 - p_2 = 0$; conditions: independent observations; expected counts typically $\geq 5$ in each cell</span>
+<span id="cb2-41"><a href="#cb2-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-42"><a href="#cb2-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-43"><a href="#cb2-43" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb2-44"><a href="#cb2-44" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-45"><a href="#cb2-45" aria-hidden="true" tabindex="-1"></a><span class="fu">## Phase B, Code notebook (5 points)</span></span>
+<span id="cb2-46"><a href="#cb2-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-47"><a href="#cb2-47" aria-hidden="true" tabindex="-1"></a>Goal. One reproducible notebook that (1) simulates a small, realistic-looking dataset for the research question and (2) analyzes it with appropriate descriptive statistics (numerical summaries and a plot) and inferential methods (test/CI). See the <span class="co">[</span><span class="ot">sample R notebook</span><span class="co">](project-4-sample-notebook-yoga)</span> for the expected structure (simulate → describe → check the confounder → test)</span>
+<span id="cb2-48"><a href="#cb2-48" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-49"><a href="#cb2-49" aria-hidden="true" tabindex="-1"></a>The simulated dataset should have:</span>
+<span id="cb2-50"><a href="#cb2-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-51"><a href="#cb2-51" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>One row per observational unit; columns for the binary explanatory variable, the response variable, and, if a RCT is not feasible, the confounding variable you identified.</span>
+<span id="cb2-52"><a href="#cb2-52" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Enough data for large-sample rules (e.g. $n \geq 20$ per group for *t*-tests; 2 × 2 counts with expected ≥ 5 for proportions/chi-square tests.</span>
+<span id="cb2-53"><a href="#cb2-53" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-54"><a href="#cb2-54" aria-hidden="true" tabindex="-1"></a>Calculate descriptive statistics for the simulated dataset using:</span>
+<span id="cb2-55"><a href="#cb2-55" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-56"><a href="#cb2-56" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Numerical summaries: <span class="in">`group_by`</span> + <span class="in">`summarize`</span> for means/SDs; <span class="in">`count`</span> / <span class="in">`mutate`</span> for counts and proportions.</span>
+<span id="cb2-57"><a href="#cb2-57" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Plots: boxplots/histograms by explanatory group for a numerical response; 100% stacked bar charts by explanatory group for a categorical response.</span>
+<span id="cb2-58"><a href="#cb2-58" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>If you have a confounder, use <span class="in">`facet_wrap(~ confounder)`</span> in plots and include it in <span class="in">`group_by`</span> for the numerical summaries.</span>
+<span id="cb2-59"><a href="#cb2-59" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-60"><a href="#cb2-60" aria-hidden="true" tabindex="-1"></a>Perform the appropriate inferential method for the simulated dataset to see whether the data is consistent with the "by chance explanation".</span>
+<span id="cb2-61"><a href="#cb2-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-62"><a href="#cb2-62" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Numerical response: <span class="in">`t.test(response ~ explanatory, data = mydataset, var.equal = FALSE)`</span>, report *p*-value and 95% CI.</span>
+<span id="cb2-63"><a href="#cb2-63" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>Binary categorical response: <span class="in">`prop.test`</span> / <span class="in">`chisq.test`</span></span>
+<span id="cb2-64"><a href="#cb2-64" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>If you have a confounder, then the test doesn't help very much because we can't distinguish between confounding and causation.</span>
+<span id="cb2-65"><a href="#cb2-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-66"><a href="#cb2-66" aria-hidden="true" tabindex="-1"></a><span class="fu">### Code notebook rubric (5 points)</span></span>
+<span id="cb2-67"><a href="#cb2-67" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-68"><a href="#cb2-68" aria-hidden="true" tabindex="-1"></a>A notebook (<span class="in">`.ipynb`</span> / <span class="in">`.qmd`</span> / <span class="in">`.Rmd`</span>) that runs top to bottom and includes:</span>
+<span id="cb2-69"><a href="#cb2-69" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-70"><a href="#cb2-70" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Points <span class="pp">|</span> Criterion <span class="pp">|</span></span>
+<span id="cb2-71"><a href="#cb2-71" aria-hidden="true" tabindex="-1"></a><span class="pp">|------------------------------------|------------------------------------|</span></span>
+<span id="cb2-72"><a href="#cb2-72" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2 <span class="pp">|</span> Reproducible simulation of a realistic dataset with <span class="in">`set.seed()`</span>: one row per observational unit, columns for the binary explanatory variable, the response, and the confounder (if no RCT), with enough data for large-sample rules. <span class="pp">|</span></span>
+<span id="cb2-73"><a href="#cb2-73" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2 <span class="pp">|</span> Descriptive analysis by explanatory group: <span class="in">`group_by`</span> + <span class="in">`summarize`</span> (means/SDs) or <span class="in">`count`</span> + <span class="in">`mutate`</span> (counts/proportions), plus an appropriate plot (boxplots/histograms for a numerical response; 100% stacked bars for a categorical response; <span class="in">`facet_wrap(~ confounder)`</span> if used). <span class="pp">|</span></span>
+<span id="cb2-74"><a href="#cb2-74" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 1 <span class="pp">|</span> Correct inferential method run on the simulated data with reported output: <span class="in">`t.test`</span> or <span class="in">`prop.test`</span>/<span class="in">`chisq.test`</span>, showing the *p*-value and 95% CI. <span class="pp">|</span></span>
+<span id="cb2-75"><a href="#cb2-75" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-76"><a href="#cb2-76" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb2-77"><a href="#cb2-77" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-78"><a href="#cb2-78" aria-hidden="true" tabindex="-1"></a><span class="fu">## Phase B, One-page study-plan report (35 points)</span></span>
+<span id="cb2-79"><a href="#cb2-79" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-80"><a href="#cb2-80" aria-hidden="true" tabindex="-1"></a>Write a one page summary of your recommended study plan for a classmate. Include your recommended analysis performed on simulated data.</span>
+<span id="cb2-81"><a href="#cb2-81" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-82"><a href="#cb2-82" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Introduction**: Restate the research question from your classmate and describe the purpose of this document (which is to give a plan for collecting, analyzing and making an appropriate conclusion based on the data; sample R code is also provided and tested on simulated data).</span>
+<span id="cb2-83"><a href="#cb2-83" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Plan to Collect Data**. Describe the response and explanatory variables, units, and measurement (see your answers to questions 1 and 2 from part 1). Justify your recommendation of either a RCT or an observational study based on the considerations of real-world feasibility and our desire for high quality evidence.</span>
+<span id="cb2-84"><a href="#cb2-84" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Plan to Analyze Data**. In a few sentences describe how to analyze the dataset. Give the names of the plots and numerical summaries you recommend . Give the name of the appropriate inferential method (t-test or proportion z test/chi-square and state the conditions for it's validity. Give the null and alternative hypotheses for the test in symbols, with a sentence describing what each symbol represents (see your answer to questions 3 and 4)</span>
+<span id="cb2-85"><a href="#cb2-85" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Plan to Make an Appropriate Conclusion**. Discuss plausible explanations (causal, confounding, chance) consistent with your recommended study design. When discussing the "by chance" explanation and trying to eliminate it via a test, discuss the two types of errors that can result. That is, assuming that a significance level of 0.05 is used as the cutoff for determining whether a p-value is small, there is a 5% chance of making a Type I error. Say what a Type I Error would be in this context and how to reduce it (reduce significance level. Say what a Type II Error would be in this context and how to reduce it (increase sample size)</span>
+<span id="cb2-86"><a href="#cb2-86" aria-hidden="true" tabindex="-1"></a><span class="ss">-   </span>**Simulated Results**: Give the numerical summaries, plots, p-value and CI from your analysis of the simulated data. Make an appropriate conclusion based on these about what this data says about the answer to your classmates question. Give a link to your code notebook (in Colab, go to "share" in the upper right hand corner, set the access to be "with anyone with the link" with view access, copy this link and insert it into your one page summary)</span>
+<span id="cb2-87"><a href="#cb2-87" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-88"><a href="#cb2-88" aria-hidden="true" tabindex="-1"></a><span class="fu">### One-page report rubric (35 points)</span></span>
+<span id="cb2-89"><a href="#cb2-89" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-90"><a href="#cb2-90" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> Points <span class="pp">|</span> Criterion <span class="pp">|</span></span>
+<span id="cb2-91"><a href="#cb2-91" aria-hidden="true" tabindex="-1"></a><span class="pp">|------------------------------------|------------------------------------|</span></span>
+<span id="cb2-92"><a href="#cb2-92" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 4 <span class="pp">|</span> Introduction: restates the assigned research question and the purpose of the document (a plan to collect, analyze, and conclude, tested on simulated data). <span class="pp">|</span></span>
+<span id="cb2-93"><a href="#cb2-93" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 7 <span class="pp">|</span> Plan to collect: defines the explanatory and response variables with operational definitions/units/levels and the observational units; recommends an RCT or an observational study with a justification (feasibility vs. quality of evidence). <span class="pp">|</span></span>
+<span id="cb2-94"><a href="#cb2-94" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 8 <span class="pp">|</span> Plan to analyze: names the recommended plots and numerical summaries matched to the variable types; names the appropriate inferential method (Welch two-sample *t*-test, or two-proportion *z*/chi-square test) and states its conditions; states $H_0$ and $H_a$ in symbols with a sentence defining each symbol in context. <span class="pp">|</span></span>
+<span id="cb2-95"><a href="#cb2-95" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 8 <span class="pp">|</span> Plan to conclude: discusses the plausible explanations consistent with the chosen design (causal / confounding / chance); defines a Type I and a Type II error in context and how to reduce each (lower the significance level; increase the sample size). <span class="pp">|</span></span>
+<span id="cb2-96"><a href="#cb2-96" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 6 <span class="pp">|</span> Sample results: reports the numerical summaries, plot(s), *p*-value, and 95% CI from the simulated data, makes an appropriate conclusion, and includes a working Colab share link to the notebook. <span class="pp">|</span></span>
+<span id="cb2-97"><a href="#cb2-97" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span> 2 <span class="pp">|</span> Format: one side of a standard 8.5×11 in. page, complete sentences. <span class="pp">|</span></span>
+<span id="cb2-98"><a href="#cb2-98" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-99"><a href="#cb2-99" aria-hidden="true" tabindex="-1"></a>------------------------------------------------------------------------</span>
+<span id="cb2-100"><a href="#cb2-100" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-101"><a href="#cb2-101" aria-hidden="true" tabindex="-1"></a>See also: <span class="co">[</span><span class="ot">Preview</span><span class="co">](project-4-preview.qmd)</span> · <span class="co">[</span><span class="ot">Milestone</span><span class="co">](project-4-milestone.qmd)</span> · <span class="co">[</span><span class="ot">Instructions</span><span class="co">](project-4-instructions.qmd)</span> · <span class="co">[</span><span class="ot">Rubric</span><span class="co">](project-4-rubric.qmd)</span> · <span class="co">[</span><span class="ot">Sample report</span><span class="co">](project-4-sample-report.qmd)</span> · <span class="co">[</span><span class="ot">Sample notebook</span><span class="co">](project-4-sample-notebook.qmd)</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button" data-in-quarto-modal=""><i class="bi"></i></button></div>
+</div></div></div></div></div>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
